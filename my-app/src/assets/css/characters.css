@@ -1,5 +1,11 @@
 .container {
     display:flex;
+    max-width: 1280px;
+    margin: 0, auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
 }
 
 .main-column1{
@@ -8,6 +14,8 @@
 
 .main-column2{
     max-width:75%;
+    display: flex;
+    flex-direction: row;
 }
 
 .character_card{
@@ -34,4 +42,10 @@
 .character_status {
     display: flex;
     justify-content: center;
+}
+
+.character_image{
+    border-radius:100%;
+    height: 150px;
+    width: 150px;
 }

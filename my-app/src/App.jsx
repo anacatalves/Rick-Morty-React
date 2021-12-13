@@ -48,16 +48,16 @@ function App() {
                 <>
                 <div className='character_card'>
                     <div className='character_image'>
-                        <img src="" alt="" />
+                        <img className='character_image' src={character.image} alt="Image" />
                     </div>
 
                     <div className='character_info'>
                         <h3>{character.name}</h3>
-                        <p>Location</p>
+                        <p>{character.location.name}</p>
                     </div>
                     
                     <div className='character_status'>
-                        <p>Alive</p>
+                        <p>{character.status}</p>
                     </div> 
                 </div>
                 </>
