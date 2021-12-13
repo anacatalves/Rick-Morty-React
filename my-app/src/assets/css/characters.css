@@ -1,3 +1,15 @@
+.container {
+    display:flex;
+}
+
+.main-column1{
+    max-width:25%;
+}
+
+.main-column2{
+    max-width:75%;
+}
+
 .character_card{
     display: flex;
     flex-direction: column;
@@ -12,9 +24,14 @@
     
 }
 
-.caracter_info{
+.character_info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.character_status {
+    display: flex;
+    justify-content: center;
 }
