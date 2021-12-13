@@ -1,4 +1,5 @@
-
+import Characters from "./components/characters";
+import './assets/css/main.css';
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
         <h1>Rick & Morty Wiki</h1>
 
         <nav> {/* componente a extrair */}
-          <p></p>
-          <p></p>
-          <p></p>
+          <a href="" target="_blank">Characters</a>
+          <a href="" target="_blank">Episodes</a>
+          <a href="" target="_blank">Locations</a>
         </nav>
 
       </header>
@@ -24,9 +25,12 @@ function App() {
         </div>
 
         <div class="main-column2">
-          <main class="search-bar"></main>
+          <div class="search-bar">
+            
+          </div>
 
-          <main class="characters"></main>{/* componente a extrair */}
+          {/* <div class="characters"></div>componente a extrair */}
+          <Characters />
 
         </div>
         

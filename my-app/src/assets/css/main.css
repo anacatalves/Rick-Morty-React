@@ -1,0 +1,12 @@
+@import url(header.css);
+@import url(filterbox.css);
+@import url(characters.css);
+
+html, body{
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
