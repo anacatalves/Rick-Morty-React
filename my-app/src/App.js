@@ -2,9 +2,13 @@
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+    <header></header>
+    <section class="search-bar"></section>
+    <main class="characters"></main>
+    <article class="filter-box"></article>
+
+    </>
   );
 }
 
