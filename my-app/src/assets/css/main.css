@@ -3,9 +3,23 @@
 @import url(characters.css);
 
 html, body{
+    box-sizing: border-box;
     background-color: #F2F2F2;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+.body-container{
+    margin:1rem;
+
+    width:100%;
+    height:100%;
+    max-width:1248px;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    
+}

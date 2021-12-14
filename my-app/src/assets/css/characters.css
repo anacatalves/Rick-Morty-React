@@ -1,30 +1,23 @@
-.container {
-    display:flex;
-    max-width: 1280px;
-    margin: 0, auto;
-    
-    align-items: center;
-    height: 100%;
-} 
+.main-content {
+    display:grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+    gap:1rem;
+}
+
 
 .main-column1{
-    width:25vw;
+    grid-column: 1 / span 3;
 }
 
 .main-column2{
-    width:75vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* media query: change to 1 column */
+    grid-column: 4 / span 12;
 }
 
 .search-character{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height:100%;
     border-radius: 50px;
 }
 
@@ -33,6 +26,7 @@
     height:4vh;
     border-radius: 10px;
     border:none;
+    margin:10px;
 }
 
 .search-character img{
@@ -42,8 +36,13 @@
     cursor:pointer;
 }
 
+.character-list{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+}
 
 .character_card{
+
     display: flex;
     flex-direction: column;
     align-items: center;
