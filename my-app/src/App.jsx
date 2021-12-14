@@ -1,18 +1,35 @@
-import react from 'react';
+import {react, useState, useEffect} from 'react';
 import Characters from "./components/characters";
 import './assets/css/main.css';
 
+
 function App() {
+
+  let [results, setResults] = useState([]);
+  let [search, setSearch] = useState("");
+  let api = `https://rickandmortyapi.com/api/character/?name=${search}`;
   
+
+  useEffect(() => {
+      (async () => {
+          let response = await fetch (api);
+          let data = await response.json();
+          
+          setResults(data.results);
+          
+      })();
+  }, [api]); 
+
+
   return (
     <>
 
-      <div class="body">
+      <div className="body-container">
 
-        <header class="nav-bar">
-          <h1>Rick & Morty <b>NFT</b></h1>
+        <header>
+          <h1>Rick & Morty NFT</h1>
 
-          <nav> {/* componente a extrair */}
+          <nav class="nav-bar"> {/* componente a extrair */}
             <a href="" target="_blank">Characters</a>
             <a href="" target="_blank">Episodes</a>
             <a href="" target="_blank">Locations</a>
@@ -20,45 +37,46 @@ function App() {
 
         </header>
 
-        <main class="container">
+        <main>
+          <h1 className="page-title">Characters</h1>
 
-          <div class="main-column1">
-            <h2>Filters</h2>
-            <p>Clear Filters</p>
-            {/* componente a extrair */}
-            <article class="filter-box">
-              <details>
-                <summary>Status</summary>
-                  <button className='Filter'>ALIVE </button>
-                  <button className='Filter'>DEAD </button>
-                  <button className='Filter'>UNKNOWN </button>
+          <div className="main-content">
+
+            <section className="main-column1">
+              <div className="filters">
+                <h2>Filters</h2>
+                <p>Clear Filters</p>
+              </div>
+              
+              <article className="filter-box">{/* componente a extrair */}
+                <details>
+                  <summary>Status</summary>
+                    <button className='Filter'>ALIVE </button>
+                    <button className='Filter'>DEAD </button>
+                    <button className='Filter'>UNKNOWN </button>
+                  </details>
+                <details>
+                  <summary>Species</summary>
+                    <button className='Filter'>HUMAN </button>
+                    <button className='Filter'>ALIEN </button>
+                    <button className='Filter'>MYTHOLOGICAL CREATURE</button>
                 </details>
-              <details>
-                <summary>Species</summary>
-                  <button className='Filter'>HUMAN </button>
-                  <button className='Filter'>ALIEN </button>
-                  <button className='Filter'>MYTHOLOGICAL CREATURE</button>
-              </details>
-              <details>
-                <summary>Gender</summary>
-                  <button className='Filter'>MALE </button>   
-                  <button className='Filter'>FEMALE </button>
-                  <button className='Filter'>UNKNOWN</button>
+                <details>
+                  <summary>Gender</summary>
+                    <button className='Filter'>MALE </button>   
+                    <button className='Filter'>FEMALE </button>
+                    <button className='Filter'>UNKNOWN</button>
+                </details>
+              </article>
 
-              </details>
-            </article>
+            </section>
+            
+            <section className="main-column2">
+              <Characters results={results} setSearch={setSearch} /> 
+            </section>
+
           </div>
-
-          {/* componente a extrair */}
-          <div class="main-column2">
-            <div class="search-bar">
-          
-            </div>
-          </div>
-
-            <Characters />
-          
-          
+        
         </main>
 
       </div>

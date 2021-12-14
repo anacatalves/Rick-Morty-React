@@ -1,18 +1,12 @@
-.nav-bar{
+header{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
+
+    background-color: white;
+
 }
 
-b{
-    color:rgb(0, 140, 255)
-}
-
-h1{
-    color: rgb(70, 70, 70);
-}
-
-nav{
-    align-items: flex-end;
+.nav-bar {
+    gap:10px;
 }
