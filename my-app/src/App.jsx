@@ -1,16 +1,9 @@
-import react, { useState } from 'react';
-//import Characters from "./components/Characters";
+import react from 'react';
+import Characters from "./components/Characters";
 import './assets/css/main.css';
 
 function App() {
-  let [results, setResults] = useState([]);
-
-  let api = "https://rickandmortyapi.com/api/character";
-
-  fetch (api)
-    .then ((response) => response.json())
-    .then ((data) => setResults(data.results));
-
+  
   return (
     <>
 
@@ -39,32 +32,11 @@ function App() {
           {/* componente a extrair */}
           <div class="main-column2">
             <div class="search-bar">
-              
+          
             </div>
           </div>
 
-          
-            {results.map ((character) => (
-                <>
-                <div className='character_card'>
-                    <div className='character_image'>
-                        <img src="" alt="" />
-                    </div>
-
-                    <div className='character_info'>
-                        <h3>{character.name}</h3>
-                        <p>Location</p>
-                    </div>
-                    
-                    <div className='character_status'>
-                        <p>Alive</p>
-                    </div> 
-                </div>
-                </>
-            ))}
-           
-
-            {/* <Characters /> */}
+            <Characters />
           
           
         </main>
