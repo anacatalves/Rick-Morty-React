@@ -1,20 +1,25 @@
 .filter-box{
     display: block;
     flex-direction: column;
-    height: 1000px;
+    height: 900px;
     background-color: white;
     border-radius: 10px;
+    border: 1px solid lightgray;
+    margin-left:20px;
     
 }
 
 summary{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     display: flex;
     flex-direction: column;
+    /* margin: 20px 0px 25px 40px; */
     margin-left: 40px;
     margin-top: 20px;
     margin-bottom: 25px;
+
+    border-bottom: 1px solid lightgray;
 }
 
 
@@ -23,9 +28,8 @@ summary{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     margin-bottom: 20px;
-    
-    
     margin-left: 40px;
     font-size: 48;
     background-color: white;
@@ -35,4 +39,11 @@ summary{
     width: 200px;
     height: 60px;
 
+}
+
+.filters{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

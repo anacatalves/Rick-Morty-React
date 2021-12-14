@@ -1,5 +1,4 @@
 import { React} from 'react';
-//import searchIcon from "../img/search-icon.png";
 
 const Characters = ({results, setSearch}) => {
 
@@ -7,8 +6,7 @@ const Characters = ({results, setSearch}) => {
         <>  
             <div className="search-character">
               <input className="search-bar" onChange={ (event) => {setSearch(event.target.value); console.log(event)} } type="text" placeholder="Search for a character" />
-        
-              {/* <img src={searchIcon} alt="" /> */}
+              <button>Search</button>
             </div> 
 
             <div className="character-list">

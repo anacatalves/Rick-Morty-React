@@ -26,10 +26,10 @@ function App() {
 
       <div className="body-container">
 
-        <header className="nav-bar">
-          <h1>Rick & Morty Wiki</h1>
+        <header>
+          <h1>Rick & Morty NFT</h1>
 
-          <nav> {/* componente a extrair */}
+          <nav class="nav-bar"> {/* componente a extrair */}
             <a href="" target="_blank">Characters</a>
             <a href="" target="_blank">Episodes</a>
             <a href="" target="_blank">Locations</a>
@@ -38,17 +38,17 @@ function App() {
         </header>
 
         <main>
+          <h1 className="page-title">Characters</h1>
 
-          <h1 class="page-title">Characters</h1>
+          <div className="main-content">
 
-          <div class="main-content">
-
-            <section class="main-column1">
-
-              <h2>Filters</h2>
-              <p>Clear Filters</p>
+            <section className="main-column1">
+              <div className="filters">
+                <h2>Filters</h2>
+                <p>Clear Filters</p>
+              </div>
               
-              <article class="filter-box">{/* componente a extrair */}
+              <article className="filter-box">{/* componente a extrair */}
                 <details>
                   <summary>Status</summary>
                     <button className='Filter'>ALIVE </button>
