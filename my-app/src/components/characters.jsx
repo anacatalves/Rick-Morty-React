@@ -1,28 +1,43 @@
-/* import React from 'react'
+import { React, useEffect, useState } from 'react';
 
 const Characters = () => {
+
+    let [results, setResults] = useState([]);
+    let api = "https://rickandmortyapi.com/api/character";
+
+    useEffect(() => {
+        (async () => {
+            let response = await fetch (api);
+            let data = await response.json();
+            
+            setResults(data.results);
+            
+        })();
+    }, [api]); 
+
     return (
-        <div className='character_card'>
-
+        <>
             {results.map ((character) => (
-                <>
-                    <div className='character_image'>
-                        <img src="" alt="" />
-                    </div>
+              <>
+              <div className='character_card'>
+                  <div className='character_image'>
+                      <img src={character.image} alt="" />
+                  </div>
 
-                    <div className='character_info'>
-                        <h3>{character.name}</h3>
-                        <p>Location</p>
-                    </div>
-                    
-                    <div className='character_status'>
-                        <p>Alive</p>
-                    </div> 
-                </>
-            ))}
-        </div> 
+                  <div className='character_info'>
+                      <h3>{character.name}</h3>
+                      <p>{character.location.name}</p>
+                  </div>
+                  
+                  <div className='character_status'>
+                      <p>{character.status}</p>
+                  </div> 
+              </div>
+              </>
+          ))} 
+        </>
     )
 }
 
 export default Characters
- */
+ 
