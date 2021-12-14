@@ -2,14 +2,15 @@ import react from 'react';
 import Characters from "./components/Characters";
 import './assets/css/main.css';
 
+
 function App() {
   
   return (
     <>
 
-      <div class="body">
+      <div className="body">
 
-        <header class="nav-bar">
+        <header className="nav-bar">
           <h1>Rick & Morty Wiki</h1>
 
           <nav> {/* componente a extrair */}
@@ -20,23 +21,26 @@ function App() {
 
         </header>
 
-        <main class="container">
+        <main className="container">
 
-          <div class="main-column1">
+          <div className="main-column1">
             {/* componente a extrair */}
-            <article class="filter-box">
-              filter-box
+            <article className="filter-box">
+              filter-box!!!
             </article>
           </div>
 
           {/* componente a extrair */}
-          <div class="main-column2">
-            <div class="search-bar">
-          
-            </div>
+          <div className="main-column2">
+
+            <h1>Characters</h1>
+
+  
+            <Characters />
+         
           </div>
 
-            <Characters />
+            
           
           
         </main>

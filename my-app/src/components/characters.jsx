@@ -1,9 +1,11 @@
 import { React, useEffect, useState } from 'react';
+//import searchIcon from "../img/search-icon.png";
 
 const Characters = () => {
 
     let [results, setResults] = useState([]);
-    let api = "https://rickandmortyapi.com/api/character";
+    let [api, setApi] = useState("https://rickandmortyapi.com/api/character");
+    let [search, setSearch] = useState(undefined);
 
     useEffect(() => {
         (async () => {
@@ -15,8 +17,24 @@ const Characters = () => {
         })();
     }, [api]); 
 
+    useEffect(() => {
+        if (search !== undefined) {
+            setApi(api = `https://rickandmortyapi.com/api/character/?name=${search}`)
+        }
+        
+    }, [search])
+
+   /*  function searchCharacter (event) {
+        setSearch(event.target.value)
+    }; */
+
     return (
-        <>
+        <>  
+            <div className="search-character">
+              <input className="search-bar" /* onClick={searchCharacter()}  */type="text" placeholder="Search for a character" value="" />
+              {/* <img src={searchIcon} alt="" /> */}
+            </div> 
+
             {results.map ((character) => (
               <>
               <div className='character_card'>
