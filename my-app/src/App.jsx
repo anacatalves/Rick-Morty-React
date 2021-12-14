@@ -1,28 +1,9 @@
-import react, { useState, useEffect } from 'react';
-//import Characters from "./components/Characters";
+import react from 'react';
+import Characters from "./components/Characters";
 import './assets/css/main.css';
 
 function App() {
-  let [results, setResults] = useState([]);
-
-  let api = "https://rickandmortyapi.com/api/character";
-
-  useEffect(() => {
-    (async () => {
-      let response = await fetch (api);
-      let data = await response.json();
-      
-      setResults(data.results);
-
-    })()
-    
-  }, [api])
-
-  const [filterParam, setFilterParam] = useState(["All"]);
-  /* fetch (api)
-    .then ((response) => response.json())
-    .then ((data) => setResults(data.results));
- */
+  
   return (
     <>
 
@@ -71,35 +52,11 @@ function App() {
           {/* componente a extrair */}
           <div class="main-column2">
             <div class="search-bar">
-              
+          
             </div>
           </div>
 
-          
-            {results.map ((character) => (
-                <>
-                <div className='character_card'>
-                    <div className='character_image'>
-                        <img className='character_image' src={character.image} alt="Image" />
-                    </div>
-
-                    <div className='character_info'>
-                        <h3>{character.name}</h3>
-                        <p>{character.location.name}</p>
-                    </div>
-                    
-                    <div className='character_status'>
-                        <p>{character.status}</p>
-                    </div> 
-
-                    <button className='AddtoCart'>Add to cart</button>
-
-                </div>
-                </>
-            ))}
-           
-
-            {/* <Characters /> */}
+            <Characters />
           
           
         </main>
