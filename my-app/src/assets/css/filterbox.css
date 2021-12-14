@@ -1,0 +1,44 @@
+.filter-box{
+display: block;
+flex-direction: column;
+width: 300px;
+height: 1000px;
+background-color: white;
+border-radius: 10px;
+margin: 15px;
+}
+
+.main-column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+summary{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.Filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    margin-left: 40px;
+    font-size: 48;
+    background-color: white;
+    border-color: #F2F2F2;
+    border-radius: 10px;
+    border-style: solid;
+    width: 200px;
+    height: 60px;
+
+}
