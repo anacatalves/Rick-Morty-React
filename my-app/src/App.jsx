@@ -10,7 +10,7 @@ function App() {
       <div class="body">
 
         <header class="nav-bar">
-          <h1>Rick & Morty Wiki</h1>
+          <h1>Rick & Morty <b>NFT</b></h1>
 
           <nav> {/* componente a extrair */}
             <a href="" target="_blank">Characters</a>

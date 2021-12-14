@@ -1,4 +1,18 @@
-.navbar{
-
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     height: 80px;
+}
+
+b{
+    color:rgb(0, 140, 255)
+}
+
+h1{
+    color: rgb(70, 70, 70);
+}
+
+nav{
+    align-items: flex-end;
 }
