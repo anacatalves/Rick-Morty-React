@@ -1,5 +1,5 @@
 import react from 'react';
-import Characters from "./components/Characters";
+import Characters from "./components/characters";
 import './assets/css/main.css';
 
 

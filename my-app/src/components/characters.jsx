@@ -39,7 +39,7 @@ const Characters = () => {
               <>
               <div className='character_card'>
                   <div className='character_image'>
-                      <img src={character.image} alt="" />
+                      <img className='character_image' src={character.image} alt="" />
                   </div>
 
                   <div className='character_info'>
@@ -50,6 +50,8 @@ const Characters = () => {
                   <div className='character_status'>
                       <p>{character.status}</p>
                   </div> 
+
+                  <button className='AddtoCart'>Add to cart</button>
               </div>
               </>
           ))} 
