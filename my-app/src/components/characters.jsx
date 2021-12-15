@@ -1,23 +1,6 @@
 import { React} from 'react';
 
 
-/*  if (Characters.status.alive) {
-    <div className='character_status' style="color:green, background-color:rgb(176, 234, 227) ">
-        <p>{character.status}</p>
-    </div> 
-}
-
-else if(Characters.status.dead) {
-    <div className='character_status' style="color:red, background-color:rgb(176, 234, 227) ">
-        <p>{character.status}</p>
-    </div> 
-}
-
-else (Characters.status.unknown); {
-    <div className='character_status' style="color:black, background-color:rgb(176, 234, 227) ">
-        <p>{character.status}</p>
-    </div> 
-}  */
 
 
 const Characters = ({results, setSearch}) => {
@@ -45,33 +28,34 @@ const Characters = ({results, setSearch}) => {
                         <div className='character_status'>
                         
                         { (() => {
-                            if (character.status == 'alive') {
+                            if (character.status == 'Alive') {
                                 return(
-                                    <div className='character_status' style="color:green, background-color:rgb(176, 234, 227) ">
+                                    <div className='character_status alive'>
                                         <p>{character.status}</p>
                                     </div> 
                                 )
                             }
                             
-                            else if(character.status == 'dead') {
+                            else if(character.status == 'Dead') {
                                 return(
-                                    <div className='character_status' style="color:red, background-color:rgb(176, 234, 227) ">
+                                    <div className='character_status dead'>
                                         <p>{character.status}</p>
                                     </div> 
                                 )
                             }
                             
-                            else (character.status == 'unknown'); {
+                            else {
+                            
                                 return(
-                                    <div className='character_status' style="color:black, background-color:rgb(176, 234, 227)" >
+                                    <div className='character_status unknown' >
                                         <p>{character.status}</p>
                                     </div> 
                                 )
                             }
-                        })
+                        })()
                         }
 
-                            <p>{character.status}</p>
+                    
                         </div> 
 
                         <button className='AddtoCart'>Add to cart</button>

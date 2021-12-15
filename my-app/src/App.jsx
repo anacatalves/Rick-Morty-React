@@ -61,8 +61,7 @@ function App() {
                     <label for="dead">DEAD</label>
                     <input type="radio" id="unknown" name="status" value="unknown" />
                     <label for="unknown">UNKNOWN</label>
-                   {/*  <button className='Filter'>DEAD </button>
-                    <button className='Filter'>UNKNOWN </button> */}
+                
                   </details>
                 <details>
                   <summary>Species</summary>
@@ -72,9 +71,7 @@ function App() {
                     <label for="alien">ALIEN</label>
                     <input type="radio" id="mythological creature" name="species" value="mythological creature" />
                     <label for="mythological creature">MYTHOLOGICAL CREATURE</label>
-                   {/*  <button className='Filter'>HUMAN </button>
-                    <button className='Filter'>ALIEN </button>
-                    <button className='Filter'>MYTHOLOGICAL CREATURE</button> */}
+                
                 </details>
                 <details>
                   <summary>Gender</summary>
@@ -84,9 +81,6 @@ function App() {
                     <label for="female">FEMALE</label>
                     <input type="radio" id="unknown" name="gender" value="unknown" />
                     <label for="unknown">UNKNOWN</label>
-                  {/*   <button className='Filter'>MALE </button>   
-                    <button className='Filter'>FEMALE </button>
-                    <button className='Filter'>UNKNOWN</button> */}
                 </details>
               </article>
 
