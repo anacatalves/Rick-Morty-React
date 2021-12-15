@@ -5,7 +5,7 @@ const Characters = ({results, setSearch}) => {
     return (
         <>  
             <div className="search-character">
-              <input className="search-bar" onChange={ (event) => {setSearch(event.target.value); console.log(event)} } type="text" placeholder="Search for a character" />
+              <input className="search-bar" onChange={ (event) => {setSearch(event.target.value)} } type="text" placeholder="Search for a character" />
               <button>Search</button>
             </div> 
 

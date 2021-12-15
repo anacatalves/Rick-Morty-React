@@ -1,7 +1,7 @@
 .filter-box{
     display: block;
     flex-direction: column;
-    height: 900px;
+    height: fit-content;
     background-color: white;
     border-radius: 10px;
     border: 1px solid lightgray;
@@ -65,6 +65,12 @@ label{
     justify-content: center;
     align-items: center;
 }
+
+.filters a {
+    color:rgb(59, 130, 246);
+    margin-top:10px;
+    margin-bottom:10px;
+}/* Unvisited link  */         
 
 .filter-box input {
     visibility:hidden;
