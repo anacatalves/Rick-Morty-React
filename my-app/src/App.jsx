@@ -27,7 +27,7 @@ function App() {
     <>
 
       <div className="body-container">
-
+      
         <header>
           <h1>Rick & Morty NFT</h1>
 

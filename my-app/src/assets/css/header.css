@@ -2,13 +2,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background-color: white;
-
     width:100%;
 
+    background-color: white;
+    border-bottom: 2px solid lightgray;
 }
 
-.nav-bar {
-    gap:10px;
+.nav-bar{
+    gap:20px;
 }

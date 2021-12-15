@@ -14,31 +14,12 @@ summary{
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    /* margin: 20px 0px 25px 40px; */
     margin-left: 40px;
     margin-top: 20px;
     margin-bottom: 25px;
-
-    border-bottom: 1px solid lightgray;
-}
-
-
-.main-column1 label{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.644);
     
-    margin-bottom: 20px;
-    margin-left: 40px;
-    font-size: 48;
-    background-color: white;
-    border-color: #F2F2F2;
-    border-radius: 10px;
-    border-style: solid;
-    width: 150px;
-    height: 60px;
-
+    cursor: pointer;
 }
 
 label{
@@ -57,6 +38,12 @@ label{
     width: 200px;
     height: 60px;
 
+    cursor: pointer;
+}
+
+label:hover{
+    background-color:#4ba8ff;
+    color:white;
 }
 
 .filters{
@@ -68,15 +55,16 @@ label{
 
 .filters a {
     color:rgb(59, 130, 246);
-    margin-top:10px;
-    margin-bottom:10px;
-}/* Unvisited link  */         
+    font-size:16px;
+    margin-top:0;
+    margin-bottom:15px;
+}         
 
 .filter-box input {
     visibility:hidden;
 }
 
 input:checked + label {
-    background: rgb(75, 168, 255);
+    background: #4ba8ff;
     color: white;
 }

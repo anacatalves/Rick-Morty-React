@@ -41,8 +41,9 @@ main h1 {
     width:60px;
     border-radius: 10px;
     border: 1px solid lightgray;
-    background-color: rgb(59, 130, 246);
+    background-color: #4ba8ff;
     color:white;
+    font:13px bold;
 }
 
 .character-list{
@@ -62,6 +63,10 @@ main h1 {
     width: 280px;
     margin: 10px;
     border: 1px solid lightgray;
+}
+
+.character_card:hover{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
 }
 
 .character_info {
@@ -119,7 +124,11 @@ main h1 {
     border-style: none;
     background-color: rgb(218, 234, 248);
     border-radius: 10px;
-    color: blue;
+    color: rgb(40, 85, 156);
     font-size: 13px;
     font-weight: bold;
+}
+
+.AddtoCart:hover{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
 }
