@@ -7,7 +7,10 @@ function App() {
 
   let [results, setResults] = useState([]);
   let [search, setSearch] = useState("");
-  let api = `https://rickandmortyapi.com/api/character/?name=${search}`;
+  let [status, setStatus] = useState("");
+  let [gender, setGender] = useState("");
+  let [species, setSpecies] = useState("");
+  let api = `https://rickandmortyapi.com/api/character/?name=${search}&status=${status}&gender=${gender}&species=${species}`;
   
 
   useEffect(() => {
@@ -20,6 +23,7 @@ function App() {
       })();
   }, [api]); 
 
+  
 
   return (
     <>
@@ -51,21 +55,38 @@ function App() {
               <article className="filter-box">{/* componente a extrair */}
                 <details>
                   <summary>Status</summary>
-                    <button className='Filter'>ALIVE </button>
-                    <button className='Filter'>DEAD </button>
-                    <button className='Filter'>UNKNOWN </button>
+                  <input type="radio" id="alive" name="status" value="alive" />
+                    <label for="alive">ALIVE</label>
+                    <input type="radio" id="dead" name="status" value="dead" />
+                    <label for="dead">DEAD</label>
+                    <input type="radio" id="unknown" name="status" value="unknown" />
+                    <label for="unknown">UNKNOWN</label>
+                   {/*  <button className='Filter'>DEAD </button>
+                    <button className='Filter'>UNKNOWN </button> */}
                   </details>
                 <details>
                   <summary>Species</summary>
-                    <button className='Filter'>HUMAN </button>
+                  <input type="radio" id="human" name="species" value="human" />
+                    <label for="human">HUMAN</label>
+                    <input type="radio" id="alien" name="species" value="alien" />
+                    <label for="alien">ALIEN</label>
+                    <input type="radio" id="mythological creature" name="species" value="mythological creature" />
+                    <label for="mythological creature">MYTHOLOGICAL CREATURE</label>
+                   {/*  <button className='Filter'>HUMAN </button>
                     <button className='Filter'>ALIEN </button>
-                    <button className='Filter'>MYTHOLOGICAL CREATURE</button>
+                    <button className='Filter'>MYTHOLOGICAL CREATURE</button> */}
                 </details>
                 <details>
                   <summary>Gender</summary>
-                    <button className='Filter'>MALE </button>   
+                  <input type="radio" id="male" name="gender" value="male" />
+                    <label for="male">MALE</label>
+                    <input type="radio" id="female" name="gender" value="female" />
+                    <label for="female">FEMALE</label>
+                    <input type="radio" id="unknown" name="gender" value="unknown" />
+                    <label for="unknown">UNKNOWN</label>
+                  {/*   <button className='Filter'>MALE </button>   
                     <button className='Filter'>FEMALE </button>
-                    <button className='Filter'>UNKNOWN</button>
+                    <button className='Filter'>UNKNOWN</button> */}
                 </details>
               </article>
 

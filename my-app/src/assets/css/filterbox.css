@@ -41,9 +41,36 @@ summary{
 
 }
 
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 20px;
+    margin-left: 40px;
+    font-size: 48;
+    background-color: white;
+    border-color: #F2F2F2;
+    border-radius: 10px;
+    border-style: solid;
+    width: 200px;
+    height: 60px;
+
+}
+
 .filters{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+input {
+    visibility:hidden;
+}
+
+input:checked + label {
+    background: rgb(75, 168, 255);
+    color: white;
 }
