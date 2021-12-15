@@ -1,25 +1,5 @@
 import { React} from 'react';
 
-
-/*  if (Characters.status.alive) {
-    <div className='character_status' style="color:green, background-color:rgb(176, 234, 227) ">
-        <p>{character.status}</p>
-    </div> 
-}
-
-else if(Characters.status.dead) {
-    <div className='character_status' style="color:red, background-color:rgb(176, 234, 227) ">
-        <p>{character.status}</p>
-    </div> 
-}
-
-else (Characters.status.unknown); {
-    <div className='character_status' style="color:black, background-color:rgb(176, 234, 227) ">
-        <p>{character.status}</p>
-    </div> 
-}  */
-
-
 const Characters = ({results, setSearch}) => {
 
     return (
@@ -44,7 +24,7 @@ const Characters = ({results, setSearch}) => {
                         
                         <div className='character_status'>
                         
-                        { (() => {
+                        {/* { (() => {
                             if (character.status == 'alive') {
                                 return(
                                     <div className='character_status' style="color:green, background-color:rgb(176, 234, 227) ">
@@ -69,7 +49,7 @@ const Characters = ({results, setSearch}) => {
                                 )
                             }
                         })
-                        }
+                        } */}
 
                             <p>{character.status}</p>
                         </div> 

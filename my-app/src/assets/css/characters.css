@@ -1,5 +1,4 @@
 main{
-    background-color: #F2F2F2;
     width:100%;
 }
 
@@ -7,6 +6,7 @@ main{
     display:grid;
     grid-template-columns: repeat(12, minmax(0,1fr));
     gap:1rem;
+
 }
 
 main h1 {
@@ -43,13 +43,6 @@ main h1 {
     border: 1px solid lightgray;
     background-color: rgb(59, 130, 246);
     color:white;
-}
-
-.search-character img{
-    width: 30px;
-    height: 30px;
-    
-    cursor:pointer;
 }
 
 .character-list{

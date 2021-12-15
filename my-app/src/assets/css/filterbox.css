@@ -23,7 +23,7 @@ summary{
 }
 
 
-.Filter{
+.main-column1 label{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +36,7 @@ summary{
     border-color: #F2F2F2;
     border-radius: 10px;
     border-style: solid;
-    width: 200px;
+    width: 150px;
     height: 60px;
 
 }
