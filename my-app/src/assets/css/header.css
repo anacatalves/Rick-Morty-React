@@ -9,5 +9,12 @@ header{
 }
 
 .nav-bar{
-    gap:20px;
+    display: flex;
+    flex-direction: row;
+    gap:25px;
+}
+
+.carrito-img{
+    width: 25px;
+    height: auto; 
 }
