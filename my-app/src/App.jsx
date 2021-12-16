@@ -29,7 +29,7 @@ function App() {
       <div className="body-container">
       
         <header>
-          <h1>Rick & Morty NFT</h1>
+          <h1>Rick & Morty <b>NFT</b></h1>
 
           <nav class="nav-bar"> {/* componente a extrair */}
             <a href="" target="_blank">Characters</a>
@@ -50,6 +50,7 @@ function App() {
             
             <section className="main-column2">
               <Characters results={results} setSearch={setSearch} /> 
+
             </section>
 
           </div>
