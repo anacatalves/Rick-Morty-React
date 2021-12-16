@@ -1,4 +1,5 @@
 import {React} from "react";
+import { NavLink } from "react-router-dom";
 import shoppingcart from "../assets/img/shoppingcart.png"
 
 function Navbar() {
@@ -7,12 +8,11 @@ function Navbar() {
           <h1>Rick & Morty <b>NFT</b></h1>
 
           <nav class="nav-bar"> {/* componente a extrair */}
-            <a href="" target="_blank">Characters</a>
-            <a href="" target="_blank">Episodes</a>
-            <a href="" target="_blank">Locations</a>
-            <a href="" target="_blank"><img class= "cart-img" src={shoppingcart}/></a>            
-          </nav>
-
+            <NavLink to="/" >Characters</NavLink>
+            <NavLink to="/episodes">Episodes</NavLink>
+            <NavLink to="/locations">Locations</NavLink>
+            <NavLink to="/cart"><img class= "cart-img" src={shoppingcart}/></NavLink>
+           </nav>
         </header>
     )
 }
