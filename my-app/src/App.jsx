@@ -2,6 +2,7 @@ import {react, useState, useEffect} from 'react';
 import Characters from "./components/characters";
 import Filters from "./components/filters";
 import './assets/css/main.css';
+import carrito from "./assets/img/carrito.png"
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   let [species, setSpecies] = useState("");
   let api = `https://rickandmortyapi.com/api/character/?name=${search}&status=${status}&species=${species}&gender=${gender}`;
 
+  
   useEffect(() => {
       (async () => {
           let response = await fetch (api);
@@ -35,6 +37,7 @@ function App() {
             <a href="" target="_blank">Characters</a>
             <a href="" target="_blank">Episodes</a>
             <a href="" target="_blank">Locations</a>
+            <a href="" target="_blank"><img class= "carrito-img" src={carrito}/></a>            
           </nav>
 
         </header>
