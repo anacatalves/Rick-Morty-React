@@ -1,6 +1,7 @@
 import {react, useState, useEffect} from 'react';
 import Characters from "../components/characters";
 import Filters from "../components/filters";
+import Footer from '../components/footer';
 
 
 function Home (){
@@ -37,9 +38,15 @@ function Home (){
                     <section className="main-column2">
                         <Characters results={results} setSearch={setSearch} /> 
                     </section>
+
+                    <Footer></Footer>
+                    
                 </div>
-        </main>        
+        </main>
     )
 }
+
+
+
 
 export default Home
