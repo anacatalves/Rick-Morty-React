@@ -3,7 +3,6 @@ import Characters from "./components/characters";
 import Filters from "./components/filters";
 import './assets/css/main.css';
 
-
 function App() {
 
   let [results, setResults] = useState([]);

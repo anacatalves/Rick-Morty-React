@@ -8,6 +8,10 @@ header{
     border-bottom: 2px solid lightgray;
 }
 
+header h1 {
+    margin-left: 20px;
+}
+
 .nav-bar{
     gap:20px;
 }
