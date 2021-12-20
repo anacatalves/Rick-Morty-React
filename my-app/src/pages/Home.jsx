@@ -1,7 +1,8 @@
 import {react, useState, useEffect} from 'react';
 import Characters from "../components/characters";
 import Filters from "../components/filters";
-import Footer from '../components/footer';
+import Paginacion from '../components/paginacion';
+
 
 
 function Home (){
@@ -10,8 +11,10 @@ function Home (){
     let [status, setStatus] = useState("");
     let [gender, setGender] = useState("");
     let [species, setSpecies] = useState("");
+    let [page, setPage] = useState (1);
+
     
-    let api = `https://rickandmortyapi.com/api/character/?name=${search}&status=${status}&species=${species}&gender=${gender}`;
+    let api = `https://rickandmortyapi.com/api/character/?page=${page}&name=${search}&status=${status}&species=${species}&gender=${gender}`;
 
   
     useEffect(() => {
@@ -39,7 +42,7 @@ function Home (){
                         <Characters results={results} setSearch={setSearch} /> 
                     </section>
 
-                    <Footer></Footer>
+                    <Paginacion page={page} setPage={setPage}></Paginacion>
                     
                 </div>
         </main>

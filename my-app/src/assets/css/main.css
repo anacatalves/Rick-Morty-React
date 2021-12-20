@@ -1,6 +1,7 @@
 @import url(header.css);
 @import url(filterbox.css);
 @import url(characters.css);
+@import url(footer.css);
 
 html, body{
     box-sizing: border-box;
