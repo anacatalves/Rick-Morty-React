@@ -2,6 +2,9 @@
 @import url(filterbox.css);
 @import url(characters.css);
 @import url(footer.css);
+@import url(dropdownlist.css);
+@import url(episodes.css);
+
 
 html, body{
     box-sizing: border-box;
