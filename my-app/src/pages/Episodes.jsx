@@ -18,24 +18,25 @@ function Episodes ({results}){
 
         <main>
         <h1 className="page-title">Episode: <b>Pilot</b></h1>
-
+        
             <div className="main-content">
 
                 <section className="main-column1">
                     <h1>Pick Episode</h1>
                     <article className='filter-box'>
                         <select>
-                            {resultsEpisodes.map(({ label, value }) => (
-                                <option key={value} value={value}>
-                                Episode - {label}
-                                </option>
-                        ))}
+                            
+                                {[...Array(51).keys()].map((value) => {
+                                    return <option key={value} value={value+1}>
+                                    Episode - {value+1}</option>
+                                })}
+                
                         </select>
                     </article>
                 </section>
 
                 <section className="main-column2">
-                     <Characters results={results} />  
+                     {/* <Characters results={results} />   */}
                 </section>
             </div>
         </main>
