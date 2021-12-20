@@ -6,7 +6,6 @@ import Locations from "./pages/Locations"
 import ShoppingCart from "./pages/ShoppingCart"
 import Navbar from './components/navbar';
 
-
 function App() {
 
   return (
@@ -20,7 +19,7 @@ function App() {
         <Routes>
           <Route path= "/" element= {<Home/>}/>
           <Route path= "/episodes" element= {<Episodes/>}/>
-          <Route path= "/locations" element= {<h1>Locations</h1>}/>
+          <Route path= "/locations" element= {<Locations/>}/>
           <Route path= "/cart" element= {<h1>ShoppingCart</h1>}/>
         </Routes>
 

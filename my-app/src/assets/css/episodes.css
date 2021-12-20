@@ -1,3 +1,8 @@
-h1 b{
+.page-title b{
     color: rgb(85, 139, 255);
+}
+
+.page-subtitle {
+    opacity:0.6;
+    font-size:16px;
 }

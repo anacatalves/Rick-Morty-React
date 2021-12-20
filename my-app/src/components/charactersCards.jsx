@@ -1,14 +1,9 @@
 import { React} from 'react';
 
-const Characters = ({results, setSearch}) => {
+const CharactersCards = ( {results} ) => {
 
     return (
         <>  
-            <div className="search-character">
-              <input className="search-bar" onChange={ (event) => {setSearch(event.target.value)} } type="text" placeholder="Search for a character" />
-              <button>Search</button>
-            </div> 
-
             <div className="character-list">
                 {results.map ((character, index) => (
                 <>
@@ -63,5 +58,5 @@ const Characters = ({results, setSearch}) => {
     )
 }
 
-export default Characters
+export default CharactersCards
  

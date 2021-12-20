@@ -1,42 +1,54 @@
 import {react, useState, useEffect} from 'react';
-import Characters from "../components/characters";
+import CharactersCards from "../components/charactersCards";
 
-function Episodes ({results}){
-    let [resultsEpisodes, setResultsEpisodes] = useState([]);
-    let apiEpisodes = `https://rickandmortyapi.com/api/episode`;
+function Episodes (){
+    let [results, setResults] = useState([]);
+    let [episodeNumber, setEpisodeNumber] = useState(1);
+    let [episodesInfo, setEpisodesInfo] = useState("");
+    let apiEpisodes = `https://rickandmortyapi.com/api/episode/${episodeNumber}`;
 
     useEffect(() => {
-    async function GetEpisodes (){
+    (async () => {
         let response = await fetch (apiEpisodes); 
         let data = await response.json();
-        setResultsEpisodes(data.results.map(({ id }) => ({ label: id, value: id })));
-    }
-        GetEpisodes ();
-    });
+        
+        let characters = await Promise.all (data.characters.map((characterUrl) => {
+            return fetch(characterUrl)
+            .then ((response) => response.json()) 
+        }))
+        
+        setResults(characters);
+        setEpisodesInfo(data);
+    })()});
 
     return (
 
-        <main>
-        <h1 className="page-title">Episode: <b>Pilot</b></h1>
-        
+        <main className="episodesPage">
+
+            <h1 className="page-title">Episode: <b>{episodesInfo.name}</b></h1>
+            <h1 className="page-subtitle"> Air date: {episodesInfo.air_date} </h1>
+
             <div className="main-content">
 
                 <section className="main-column1">
                     <h1>Pick Episode</h1>
                     <article className='filter-box'>
                         <select>
-                            
-                                {[...Array(51).keys()].map((value) => {
-                                    return <option key={value} value={value+1}>
-                                    Episode - {value+1}</option>
-                                })}
+                        
+                            {[...Array(51).keys()].map((value) => {
+                                return (
+                                <option onClick={ (event) => {setEpisodeNumber(event.target.value)} } key={value} value={value+1}>
+                                    Episode - {value+1}
+                                </option>
+                                )
+                            })}
                 
                         </select>
                     </article>
                 </section>
 
                 <section className="main-column2">
-                     {/* <Characters results={results} />   */}
+                   <CharactersCards results={results} /> 
                 </section>
             </div>
         </main>
@@ -44,4 +56,4 @@ function Episodes ({results}){
     )
 }
 
-export default Episodes
+export default Episodes;
