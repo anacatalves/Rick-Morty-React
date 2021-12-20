@@ -1,5 +1,6 @@
 import {react, useState, useEffect} from 'react';
-import Characters from "../components/characters";
+import CharactersCards from "../components/charactersCards";
+import SearchCharacter from '../components/searchCharacter';
 import Filters from "../components/filters";
 import Pagination from '../components/pagination';
 
@@ -36,11 +37,10 @@ function Home (){
                     </section>
           
                     <section className="main-column2">
-                        <Characters results={results} setSearch={setSearch} /> 
+                        <SearchCharacter setSearch={setSearch} />
+                        <CharactersCards results={results} /> 
                     </section>
-
-                    <Pagination />
-                    
+                                        
                 </div>
         </main>
     )
