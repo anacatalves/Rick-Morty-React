@@ -2,12 +2,8 @@ import {react, useState, useEffect} from 'react';
 import CharactersCards from "../components/charactersCards";
 import SearchCharacter from '../components/searchCharacter';
 import Filters from "../components/filters";
-<<<<<<< HEAD
-import Paginacion from '../components/paginacion';
-
-=======
 import Pagination from '../components/pagination';
->>>>>>> 6456f36356b45e8f1483e8194debf81884d5c788
+
 
 
 function Home (){
@@ -48,7 +44,7 @@ function Home (){
                         <CharactersCards results={results} /> 
                     </section>
 
-                    <Paginacion page={page} setPage={setPage}></Paginacion>
+                    <Pagination page={page} setPage={setPage}></Pagination>
 
                 </div>
         </main>

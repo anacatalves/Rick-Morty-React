@@ -1,5 +1,7 @@
+
+
 select{
-    background-color: none;
+    background-color: red;
     height: 50px;
     border-radius: 15px;
     border-color: none;
@@ -8,6 +10,8 @@ select{
     font-size: 16px;
     margin-left: 10px;
 }
+
+
 h1{
     color: rgb(51, 51, 51);
 }

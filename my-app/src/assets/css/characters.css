@@ -43,8 +43,14 @@ main h1 {
     border: 1px solid lightgray;
     background-color: #4ba8ff;
     color:white;
-    font:13px bold;
+    font-size:13px;
 }
+
+.search-character button:hover{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
 
 .character-list{
     display:grid;
