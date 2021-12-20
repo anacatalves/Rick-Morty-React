@@ -1,7 +1,7 @@
 import {react, useState, useEffect} from 'react';
 import Characters from "../components/characters";
 
-function Episodes ({results}){
+function Episodes ({ results }){
     let [resultsEpisodes, setResultsEpisodes] = useState([]);
     let apiEpisodes = `https://rickandmortyapi.com/api/episode`;
 
@@ -34,13 +34,13 @@ function Episodes ({results}){
                     </article>
                 </section>
 
-                <section className="main-column2">
-                     <Characters results={results} />  
-                </section>
+               {/*  <section className="main-column2">
+                     <Characters results={ results } />  
+                </section> */}
             </div>
         </main>
 
     )
 }
 
-export default Episodes
+export default Episodes;

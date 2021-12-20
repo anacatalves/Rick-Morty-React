@@ -1,7 +1,7 @@
 import {react, useState, useEffect} from 'react';
 import Characters from "../components/characters";
 import Filters from "../components/filters";
-import Footer from '../components/footer';
+import Pagination from '../components/pagination';
 
 
 function Home (){
@@ -39,7 +39,7 @@ function Home (){
                         <Characters results={results} setSearch={setSearch} /> 
                     </section>
 
-                    <Footer></Footer>
+                    <Pagination />
                     
                 </div>
         </main>
