@@ -1,4 +1,5 @@
 import { React} from 'react';
+import AddToCart from './addToCart';
 
 const CharactersCards = ( {results} ) => {
 
@@ -8,6 +9,7 @@ const CharactersCards = ( {results} ) => {
                 {results.map ((character, index) => (
                 <>
                     <div className='character_card' key={index}>
+                        
                         <div className='character_image'>
                             <img className='character_image' src={character.image} alt="" />
                         </div>
@@ -49,7 +51,8 @@ const CharactersCards = ( {results} ) => {
                 
                         </div> 
 
-                        <button className='AddtoCart'>Add to cart</button>
+                        <AddToCart />
+
                     </div>
                     </>
                 ))} 

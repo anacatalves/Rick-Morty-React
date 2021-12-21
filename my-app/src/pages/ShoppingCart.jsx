@@ -1,6 +1,7 @@
-import React from 'react'
+import {React, useState} from 'react'
 
 const ShoppingCart = () => {
+
     return (
         
         <div className="shoppingCart">
@@ -13,7 +14,7 @@ const ShoppingCart = () => {
 
                 <div className="item-info">
                     <div className="item-section1">
-                        <h3>Name</h3>
+                        <p>Name</p>
                         <p>9.00€</p>
                     </div>
 
@@ -28,8 +29,7 @@ const ShoppingCart = () => {
                     </div>
 
                 </div>
-                    
-               
+                
             </div> 
 
             <div className="shoppingCart-subtotal">
@@ -46,20 +46,3 @@ const ShoppingCart = () => {
 }
 
 export default ShoppingCart
-
-{/* <div className="shoppingCart-itemInfo">
-<div className="">
-    <h3>Character Name</h3>
-    <p>Character Location</p>
-    <p>Character Status</p>
-</div>
-
-<div className="shoppingCart-stock">
-    <p>In stock</p>
-</div>
-</div>
-
-<div className="shoppingCart-priceBox">
-<p>9.00€</p>
-<p>Remove</p>
-</div> */}

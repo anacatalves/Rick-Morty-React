@@ -40,6 +40,10 @@
     margin:0;
 }
 
+.item-info b {
+    font-weight: normal;
+}
+
 .item-section1{
     display:flex;
     justify-content: space-between;
