@@ -20,7 +20,7 @@ function Locations () {
             setResults(residents)
             setLocationInfo(data);    
         })();
-    }, [apiLocations]); 
+        }, [apiLocations]); 
 
     return (
         <main className="locationsPage">
@@ -33,11 +33,11 @@ function Locations () {
                 <section className="main-column1">
                     <h1>Pick Location</h1>
                     <article className='filter-box'>
-                        <select>
+                        <select onChange={ (event) => {setLocationNumber(event.target.value)} }>
                         
                             {[...Array(126).keys()].map((value) => {
                                 return (
-                                <option onClick={ (event) => {setLocationNumber(event.target.value)} } key={value} value={value+1}>
+                                <option key={value} value={value+1}>
                                     Location - {value+1}
                                 </option>
                                 )

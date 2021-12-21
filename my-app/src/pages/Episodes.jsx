@@ -18,7 +18,7 @@ function Episodes (){
         setResults(characters);
         setEpisodesInfo(data);
     })();
-},[apiEpisodes]);
+    },[apiEpisodes]);
 
     return (
 
@@ -31,12 +31,12 @@ function Episodes (){
 
                 <section className="main-column1">
                     <h1>Pick Episode</h1>
-                    <article>
-                        <select>
+                    <article className='filter-box'>
+                        <select onChange={ (event) => {setEpisodeNumber(event.target.value)} }>
                         
                             {[...Array(51).keys()].map((value) => {
                                 return (
-                                <option onClick={ (event) => {setEpisodeNumber(event.target.value)} } key={value} value={value+1}>
+                                <option key={value} value={value+1}>
                                     Episode - {value+1}
                                 </option>
                                 )
