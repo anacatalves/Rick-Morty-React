@@ -12,9 +12,9 @@ function Episodes (){
         let response = await fetch (apiEpisodes); 
         let data = await response.json();
         
-        let characters = await Promise.all (data.characters.map((characterUrl) => {
-            return fetch(characterUrl)
-            .then ((response) => response.json()) 
+        let characters = await Promise.all (data.characters.map(async (characterUrl) => {
+            const response = await fetch(characterUrl);
+            return await response.json(); 
         }))
         
         setResults(characters);
