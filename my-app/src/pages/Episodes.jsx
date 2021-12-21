@@ -12,14 +12,13 @@ function Episodes (){
         let response = await fetch (apiEpisodes); 
         let data = await response.json();
         
-        let characters = await Promise.all (data.characters.map((characterUrl) => {
-            return fetch(characterUrl)
-            .then ((response) => response.json()) 
+        let characters = await Promise.all (data.characters.map ((characterUrl) => {
+            return fetch(characterUrl).then(response => response.json());
         }))
-        
         setResults(characters);
         setEpisodesInfo(data);
-    })()});
+    })();
+},[apiEpisodes]);
 
     return (
 
@@ -32,7 +31,7 @@ function Episodes (){
 
                 <section className="main-column1">
                     <h1>Pick Episode</h1>
-                    <article className='filter-box'>
+                    <article>
                         <select>
                         
                             {[...Array(51).keys()].map((value) => {
