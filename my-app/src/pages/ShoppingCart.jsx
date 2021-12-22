@@ -1,6 +1,7 @@
 import {React, useState} from 'react'
 import check from "../assets/img/check.png"
 import ItemCard from '../components/ItemCard'
+
 const ShoppingCart = () => {
     
     return (

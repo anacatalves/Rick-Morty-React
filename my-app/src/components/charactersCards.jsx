@@ -1,7 +1,7 @@
 import { React} from 'react';
 
 
-const CharactersCards = ( {results} ) => {
+const CharactersCards = ( {results, addToCart} ) => {
 
     return (
         <>  
@@ -51,9 +51,9 @@ const CharactersCards = ( {results} ) => {
                 
                         </div> 
 
-                        <button className='AddtoCart'>Add to cart</button>  {/* agregar onClick / onAdd function */}
+                        <button className='AddtoCart' onClick={addToCart(character)}>Add to cart</button> 
 
-
+                            
                     </div>
                     </>
                 ))} 

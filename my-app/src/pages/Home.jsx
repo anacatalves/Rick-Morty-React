@@ -42,7 +42,7 @@ function Home (){
           
                     <section className="main-column2">
                         <SearchCharacter setSearch={setSearch} />
-                        <CharactersCards results={results} /> 
+                        <CharactersCards results={results} addToCart={addToCart}/> 
                     </section>
 
                     <Pagination page={page} setPage={setPage}></Pagination>
@@ -51,8 +51,5 @@ function Home (){
         </main>
     )
 }
-
-
-
 
 export default Home

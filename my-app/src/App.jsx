@@ -5,10 +5,12 @@ import Episodes from "./pages/Episodes"
 import Locations from "./pages/Locations"
 import ShoppingCart from "./pages/ShoppingCart"
 import Navbar from './components/navbar';
+import { useState } from 'react';
 
 function App() {
   
   let [cartItems, setCartItems] = useState([]);
+  let [subTotal, setSubTotal] = useState (1);
 
   /* newItem = character in charactersCards.jsx */
   const addToCart = (newItem) => {
@@ -26,8 +28,6 @@ function App() {
 
   }
   
-  
-
   return (
     
     <Router>
