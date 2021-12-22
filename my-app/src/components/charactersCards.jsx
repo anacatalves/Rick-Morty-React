@@ -1,7 +1,6 @@
 import { React} from 'react';
-import AddToCart from './addToCart';
 
-const CharactersCards = ( {results} ) => {
+const CharactersCards = ( {results, addToCart} ) => {
 
     return (
         <>  
@@ -20,7 +19,6 @@ const CharactersCards = ( {results} ) => {
                         </div>
                         
                         <div className='character_status'>
-                        
                             { (() => {
                                 if (character.status == 'Alive') {
                                     return(
@@ -29,7 +27,6 @@ const CharactersCards = ( {results} ) => {
                                         </div> 
                                     )
                                 }
-                                
                                 else if(character.status == 'Dead') {
                                     return(
                                         <div className='character_status dead'>
@@ -37,7 +34,6 @@ const CharactersCards = ( {results} ) => {
                                         </div> 
                                     )
                                 }
-                                
                                 else {
                                 
                                     return(
@@ -48,12 +44,10 @@ const CharactersCards = ( {results} ) => {
                                 }
                             })()
                             }
-                
                         </div> 
 
-                        {/* <AddToCart /> */}
-                        <button className='AddtoCart'>Add to cart</button>
-
+                        <button className='AddtoCart' onClick={ () => {addToCart(character)} }>Add to cart</button> 
+                        
                     </div>
                     </>
                 ))} 

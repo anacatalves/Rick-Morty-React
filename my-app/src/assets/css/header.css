@@ -29,6 +29,13 @@ header h1 {
     height: auto; 
 }
 
+.cart-units-number{
+    font-size:12px;
+    color:black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
 header b{
     color: rgb(85, 139, 255);
 }

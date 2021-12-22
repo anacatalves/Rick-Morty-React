@@ -3,31 +3,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     width: 100%;
+}
+
+.shoppingCart h1{
+    display: flex;
+    font-size: 48px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .shoppingCart-item{
     display:flex;
     flex-direction: row;
     width:60%; 
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
 .item-img {
     border-radius:10px;
     height: 150px;
     width: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .item-info{
-    display: flex;
+   /*  display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
     width:100%;
-    padding:0px 10px;
+    padding:0px 20px;
 
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+   
 }
 
 .item-info h3 {
@@ -48,15 +60,30 @@
     display:flex;
     justify-content: space-between;
     width:100%;
+    margin-top: 35px;
+    margin-left: 15px;
+}
+
+.item-section1 b{
+    color: rgb(77, 77, 77);
+    font-weight: bold;
+}
+
+.item-section1 p{
+    color: rgb(34, 33, 39);
+    font-weight: bold;
 }
 
 .item-section2{
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
+    margin-top: 10px;
+    opacity: 0.7;
 } 
 
 .item-section2 b {
-    opacity: 0.7;
+    margin-top: 10px;
     
 }
 
@@ -64,12 +91,25 @@
     display:flex;
     justify-content: space-between;
     width:100%;
+    margin-left: 15px;
+    margin-top: 40px;
+}
+
+.check{
+    width: 14px;
+    height: 14px;
 }
 
 .shoppingCart-subtotal{
     display: flex;
     justify-content: space-between;
     width:60%;
+    font-size: 16px;
+    color: rgb(34, 33, 39);
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 35px;
+    margin-bottom: 40px;
 }
 
 .shoppingCart-checkout{
@@ -77,13 +117,17 @@
     height:6vh;
     border: none;
     border-radius: 5px;
-    background-color: #558bff;
+    background-color: #3f75eb;
     font-weight: bold;
+    font-size: 17px;
     color:white;
+    margin-bottom: 30px;
 
 }
 
 a{
-    color:#558bff;
+    color:#4070d8;
+    font-weight: bold;
+    font-size: 17px;
     cursor: pointer;
 }

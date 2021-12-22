@@ -1,7 +1,7 @@
 import {React, useEffect, useState} from 'react';
 import CharactersCards from "../components/charactersCards";
 
-function Locations () {
+function Locations ({addToCart}) {
     let [results, setResults] = useState([]);
     let [locationNumber, setLocationNumber] = useState(1);
     let [locationInfo, setLocationInfo] = useState("");
@@ -48,7 +48,7 @@ function Locations () {
                 </section>
 
                 <section className="main-column2">
-                <CharactersCards results={results} /> 
+                <CharactersCards results={results} addToCart={addToCart} /> 
                 </section>
 
             </div>

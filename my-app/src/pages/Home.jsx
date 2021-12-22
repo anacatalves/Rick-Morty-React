@@ -6,7 +6,7 @@ import Pagination from '../components/pagination';
 
 
 
-function Home (){
+function Home ({addToCart}){
     let [results, setResults] = useState([]);
     let [search, setSearch] = useState("");
     let [status, setStatus] = useState("");
@@ -14,6 +14,7 @@ function Home (){
     let [species, setSpecies] = useState("");
     let [page, setPage] = useState (1);
 
+    
     
     let api = `https://rickandmortyapi.com/api/character/?page=${page}&name=${search}&status=${status}&species=${species}&gender=${gender}`;
 
@@ -41,7 +42,7 @@ function Home (){
           
                     <section className="main-column2">
                         <SearchCharacter setSearch={setSearch} />
-                        <CharactersCards results={results} /> 
+                        <CharactersCards results={results} addToCart={addToCart} /> 
                     </section>
 
                     <Pagination page={page} setPage={setPage}></Pagination>
@@ -50,8 +51,5 @@ function Home (){
         </main>
     )
 }
-
-
-
 
 export default Home
