@@ -52,4 +52,7 @@ function Home ({addToCart}){
     )
 }
 
+
+
+
 export default Home

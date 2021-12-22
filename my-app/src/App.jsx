@@ -17,6 +17,8 @@ function App() {
 
     const checkNewItemExists = (item) => item.id === newItem.id; /* to check the existance of a repeated item in cart*/
       if (cartItems.some(checkNewItemExists)) {
+        let sum = 0; 
+        
         return (
           <div>Item already in the cart</div>
         )
