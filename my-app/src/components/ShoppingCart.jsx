@@ -1,7 +1,7 @@
 import {React, useState} from 'react'
 
 const ShoppingCart = () => {
-
+    
     return (
         
         <div className="shoppingCart">

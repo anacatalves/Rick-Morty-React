@@ -15,6 +15,7 @@ function Home (){
     let [page, setPage] = useState (1);
 
     
+    
     let api = `https://rickandmortyapi.com/api/character/?page=${page}&name=${search}&status=${status}&species=${species}&gender=${gender}`;
 
   
