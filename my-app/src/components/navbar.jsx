@@ -14,7 +14,9 @@ function Navbar({cartItems}) {
             <NavLink to="/locations" className="page">Locations</NavLink>
             <NavLink to="/cart">
               <img class= "cart-img" src={shoppingcart}/>
-              <b className="cart-units-number">1</b>
+              <strong className="cart-units-number">{cartItems.length}</strong> 
+              {/* the parameter is "cartItems.lenght" which returns the number of elements in the 
+              cartItems array. */}
             </NavLink>
           </nav>
 

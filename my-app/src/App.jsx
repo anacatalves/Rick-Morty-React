@@ -19,37 +19,38 @@ function App() {
       if (cartItems.some(checkNewItemExists)) {
   
         return (
-          <div>Item already in the cart</div>
+          <div>Item already in the cart</div> /*we had to remove from our code???*/
         )
       } else {
         
         let sum = 0;
 
         newItem["price"] = Number.parseFloat(Math.floor(Math.random() * 200) + 1).toFixed(2);
+        /*that is to give each item a random price which is a "string"*/
 
-        console.log(newItem)
-        
         const updatedCart = [...cartItems, newItem];
 
         updatedCart.forEach((item) => {
-            sum = sum + Number.parseInt(item.price);
-        }) 
-        console.log(sum)
-
+          sum = sum + Number.parseInt(item.price); /*le suma (como número) el precio a la variable sum=0*/
+          })                                      
+        
         setCartItems (updatedCart);
         setSubTotal (Number.parseFloat(sum).toFixed(2))
-        console.log(subTotal)
       }
-       
   }
 
   const removeFromCart = (itemToRemove) => {
+    let sum = 0;
     cartItems = cartItems.filter((item) => item.id !== itemToRemove.id);
 
-    setCartItems(cartItems);
-    setSubTotal();
+    setCartItems(cartItems); /*actualizo filtrando los items que NO son iguales a los items que quiero remover*/
 
-    console.log(cartItems)
+    /*vuelvo a sumar (recalculo) con los nuevos items que integran el CartItems, luego de remover*/ 
+
+    cartItems.forEach((item) => {     
+      sum = sum + Number.parseInt(item.price);
+  }) 
+    setSubTotal((Number.parseFloat(sum).toFixed(2))); 
   }
  
   return (

@@ -30,10 +30,9 @@ header h1 {
 }
 
 .cart-units-number{
-    font-size:12px;
-    color:black;
+    font-size:14px;
+    color: rgb(85, 139, 255);
     text-decoration: none;
-    font-weight: normal;
 }
 
 header b{
