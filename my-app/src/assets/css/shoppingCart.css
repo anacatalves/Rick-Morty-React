@@ -8,18 +8,17 @@
 
 .shoppingCart h1{
     display: flex;
-    font-size: 48px;
+    font-size: 38px;
     margin-top: 80px;
     margin-bottom: 60px;
     justify-content: center;
     align-items: center;
-
 }
 
 .shoppingCart-item{
     display:flex;
     flex-direction: row;
-    width:60%; 
+    width:50%; 
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
@@ -33,13 +32,8 @@
 }
 
 .item-info{
-   /*  display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
     width:100%;
     padding:0px 20px;
-
-   
 }
 
 .item-info h3 {
@@ -103,7 +97,7 @@
 .shoppingCart-subtotal{
     display: flex;
     justify-content: space-between;
-    width:60%;
+    width:50%;
     font-size: 16px;
     color: rgb(34, 33, 39);
     font-weight: bold;
@@ -113,7 +107,7 @@
 }
 
 .shoppingCart-checkout{
-    width:60%;
+    width:50%;
     height:6vh;
     border: none;
     border-radius: 5px;
@@ -130,4 +124,8 @@ a{
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
+}
+
+.continue-shopping {
+    margin-bottom: 30px;
 }

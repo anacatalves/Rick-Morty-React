@@ -1,28 +1,21 @@
-
-/* Estilo botones paginación o "pagination buttons" */
-
 .pagination-buttons {
-    width: 100%;
-    display: flex;  /* no funciona el flex, aplicar grid*/
-    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 .Previous,
 .Next {
-    justify-content: space-between;
-    border: 1px solid lightgray;
     border-radius: 10px;
+    border: none;
     padding: 10px 20px;
-    background-color: rgb(85, 139, 255);
+    background-color: #558bff;
     color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 13px;
 }
 
 .Previous:hover,
 .Next:hover {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
-    color: black;
 }
+

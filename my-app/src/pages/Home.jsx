@@ -34,20 +34,20 @@ function Home ({addToCart}){
         <main>
             <h1 className="page-title">Characters</h1>
 
-                <div className="main-content">
+            <div className="main-content">
 
-                    <section className="main-column1">
-                        <Filters status={status} setStatus={setStatus} species={species} setSpecies={setSpecies} gender={gender} setGender={setGender}/>
-                    </section>
-          
-                    <section className="main-column2">
-                        <SearchCharacter setSearch={setSearch} />
-                        <CharactersCards results={results} addToCart={addToCart} /> 
-                    </section>
+                <section className="main-column1">
+                    <Filters status={status} setStatus={setStatus} species={species} setSpecies={setSpecies} gender={gender} setGender={setGender}/>
+                </section>
+        
+                <section className="main-column2">
+                    <SearchCharacter setSearch={setSearch} />
+                    <CharactersCards results={results} addToCart={addToCart} /> 
+                </section>
 
-                    <Pagination page={page} setPage={setPage}></Pagination>
+            </div>
 
-                </div>
+            <Pagination page={page} setPage={setPage}></Pagination>
         </main>
     )
 }

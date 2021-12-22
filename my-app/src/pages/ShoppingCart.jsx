@@ -19,7 +19,7 @@ const ShoppingCart = ({cartItems , removeFromCart, subTotal}) => {
 
             <button className="shoppingCart-checkout">Checkout</button>
 
-            <p>or <a className="blue">Continue Shopping </a></p>
+            <p className="continue-shopping">or <a className="blue">Continue Shopping </a></p>
 
         </div>
     )
