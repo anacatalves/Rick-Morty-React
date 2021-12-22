@@ -10,21 +10,23 @@ import { useState } from 'react';
 function App() {
   
   let [cartItems, setCartItems] = useState([]);
-  let [subTotal, setSubTotal] = useState (1);
+  let [subTotal, setSubTotal] = useState (0);
 
   /* newItem = character in charactersCards.jsx */
   const addToCart = (newItem) => {
     const checkNewItemExists = (item) => item.id === newItem.id; /* to check the existance of a repeated item */
       if (cartItems.some(checkNewItemExists)) {
+        let sum = 0; 
+        
         return (
           <div>item already exists in the cart</div>
         )
     } 
       else {
-        const updatedCart = [...cartItems, newItem]; 
+        //const updatedCart = [...cartItems, newItem]; 
       }
 
-      setCartItems (updatedCart);
+      //setCartItems (updatedCart);
 
   }
   
