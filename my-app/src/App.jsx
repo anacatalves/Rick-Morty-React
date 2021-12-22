@@ -7,6 +7,26 @@ import ShoppingCart from "./pages/ShoppingCart"
 import Navbar from './components/navbar';
 
 function App() {
+  
+  let [cartItems, setCartItems] = useState([]);
+
+  /* newItem = character in charactersCards.jsx */
+  const addToCart = (newItem) => {
+    const checkNewItemExists = (item) => item.id === newItem.id; /* to check the existance of a repeated item */
+      if (cartItems.some(checkNewItemExists)) {
+        return (
+          <div>item already exists in the cart</div>
+        )
+    } 
+      else {
+        const updatedCart = [...cartItems, newItem]; 
+      }
+
+      setCartItems (updatedCart);
+
+  }
+  
+  
 
   return (
     
@@ -17,7 +37,7 @@ function App() {
         <Navbar></Navbar>
 
         <Routes>
-          <Route path= "/" element= {<Home/>}/>
+          <Route path= "/" element= {<Home addToCart={addToCart}/>}/>
           <Route path= "/episodes" element= {<Episodes/>}/>
           <Route path= "/locations" element= {<Locations/>}/>
           <Route path= "/cart" element= {<ShoppingCart/>}/>
