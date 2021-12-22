@@ -1,10 +1,11 @@
-import './assets/css/main.css';
+import {react, useState} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home"
+import Navbar from './components/navbar';
 import Episodes from "./pages/Episodes"
 import Locations from "./pages/Locations"
 import ShoppingCart from "./pages/ShoppingCart"
-import Navbar from './components/navbar';
+import './assets/css/main.css';
 
 function App() {
 

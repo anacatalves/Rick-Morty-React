@@ -51,7 +51,8 @@ const CharactersCards = ( {results} ) => {
                 
                         </div> 
 
-                        <AddToCart />
+                        {/* <AddToCart /> */}
+                        <button className='AddtoCart'>Add to cart</button>
 
                     </div>
                     </>
