@@ -89,9 +89,15 @@
     margin-top: 40px;
 }
 
+.stock-check{
+    display: flex;
+    flex-direction: row;
+}
+
 .check{
     width: 14px;
     height: 14px;
+    padding: 5px;
 }
 
 .shoppingCart-subtotal{

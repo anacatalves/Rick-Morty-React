@@ -1,4 +1,6 @@
 import React from 'react'
+import check from '../assets/img/check.png'
+<assets />
 
 const ItemCard = ({cartItems, removeFromCart}) => {
 
@@ -21,8 +23,12 @@ const ItemCard = ({cartItems, removeFromCart}) => {
                             
                         </div>
 
-                        <div className="item-section3"> 
-                            {/* <img class="check" src={check}/> */} <p>In Stock</p> 
+                        <div className="item-section3">
+                            <div className="stock-check">
+                                <img class="check" src={check}/>
+                                <p>In Stock</p> 
+                            </div>
+                            
                             <a onClick={() => { removeFromCart(item)} }>Remove</a>
                         </div>
 
