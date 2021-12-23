@@ -1,4 +1,4 @@
-import {react, useState} from 'react';
+import {react, useState, useEffect} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Navbar from './components/navbar';
 import Home from "./pages/Home"
@@ -8,9 +8,18 @@ import ShoppingCart from "./pages/ShoppingCart"
 import './assets/css/main.css';
 
 function App() {
+
+  let [cartItems, setCartItems] = useState( () => {
+    const savedItems = localStorage.getItem("cartItems");
+    const initialValue = JSON.parse(savedItems);
+    return initialValue || [];
+  });
   
-  let [cartItems, setCartItems] = useState([]);
-  let [subTotal, setSubTotal] = useState (0);
+  let [subTotal, setSubTotal] = useState ( () => {
+    const savedSubTotal = localStorage.getItem("subTotal");
+    const initialValue = JSON.parse(savedSubTotal);
+    return initialValue || [] ;
+  });
 
   /* newItem = character in charactersCards.jsx */
   const addToCart = (newItem) => {
@@ -52,7 +61,15 @@ function App() {
   }) 
     setSubTotal((Number.parseFloat(sum).toFixed(2))); 
   }
- 
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  useEffect (() => {
+    localStorage.setItem("subTotal", JSON.stringify(subTotal));
+  }, [subTotal]);
+
   return (
     
     <Router>

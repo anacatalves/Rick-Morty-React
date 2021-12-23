@@ -21,7 +21,7 @@ const ItemCard = ({cartItems, removeFromCart}) => {
                             
                         </div>
 
-                        <div className="item-section3">
+                        <div className="item-section3"> 
                             {/* <img class="check" src={check}/> */} <p>In Stock</p> 
                             <a onClick={() => { removeFromCart(item)} }>Remove</a>
                         </div>
